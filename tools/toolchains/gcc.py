@@ -37,8 +37,8 @@ class GCC(mbedToolchain):
             "-MMD", "-fno-delete-null-pointer-checks", "-fomit-frame-pointer"
             ],
         'asm': ["-x", "assembler-with-cpp"],
-        'c': ["-std=gnu99"],
-        'cxx': ["-std=gnu++98", "-fno-rtti", "-Wvla"],
+        'c': ["-std=c11"],
+        'cxx': ["-std=c++11", "-fno-rtti", "-Wvla"],
         'ld': ["-Wl,--gc-sections", "-Wl,--wrap,main",
             "-Wl,--wrap,_malloc_r", "-Wl,--wrap,_free_r", "-Wl,--wrap,_realloc_r", "-Wl,--wrap,_calloc_r"],
     }
